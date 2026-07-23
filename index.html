@@ -8,7 +8,7 @@
 <meta name="keywords" content="梦幻西游手游私服,梦幻西游私服,梦幻手游私服,梦幻西游手游私服下载,梦幻西游手游私服最新,梦幻西游手游私服官网,梦幻西游手游私服2026,梦幻西游手游私服架设,梦幻西游私服源码,梦幻西游手游私服GM,梦幻西游手游私服福利,梦幻西游手游私服免费,梦幻西游手游私服高爆率,梦幻西游手游私服无限元宝,梦幻西游手游私服高福利,梦幻西游手游私服低充值,梦幻西游手游私服零氪,梦幻西游手游私服送神兽,梦幻西游手游私服满红宝宝,梦幻西游手游私服高倍经验,梦幻西游手游私服无限资源,梦幻西游手游私服白嫖神兽,梦幻西游手游私服一键5开,梦幻西游手游私服挂机,梦幻西游手游私服搬砖,梦幻西游手游私服打金,梦幻西游手游私服稳定服,梦幻西游手游私服不跑路,梦幻西游手游私服长久服,梦幻西游手游私服公益服,梦幻西游手游私服微变,梦幻西游手游私服仿官,梦幻西游手游私服原汁原味,梦幻西游手游私服高爆版,梦幻西游手游私服无限内购,梦幻西游手游私服充值返利,梦幻西游手游私服累充奖励,梦幻西游手游私服新服,梦幻西游手游私服开服,梦幻西游手游私服今日新服,梦幻西游手游私服2026新开,梦幻西游手游私服最新版本,梦幻西游手游私服下载地址,梦幻西游手游私服安卓下载,梦幻西游手游私服苹果下载,梦幻西游手游私服客户端,梦幻西游手游私服架设教程,梦幻西游手游私服搭建,梦幻西游手游私服GM后台,梦幻西游手游私服注册,梦幻西游手游私服修改客户端,梦幻西游手游私服签名,梦幻西游手游私服iOS安装,梦幻西游手游私服爱思助手,梦幻西游手游私服源码下载,梦幻西游手游私服Linux架设,梦幻西游手游私服宝塔面板,梦幻西游手游私服维护公告,梦幻西游手游私服活动,梦幻西游手游私服攻略,梦幻西游手游私服五开,梦幻西游手游私服多开,梦幻西游手游私服自动挂机,梦幻西游手游私服脚本,梦幻西游手游私服辅助,梦幻西游手游私服怀旧版,梦幻西游手游私服经典版,梦幻西游手游私服国际服,梦幻西游手游私服双平台,梦幻西游手游私服轻享服,梦幻西游手游私服畅玩服,梦幻西游手游私服新区攻略,大梦西游私服,畅玩西游私服,梦境西游私服,梦幻西游手游私服官网下载,梦幻西游手游私服安全,梦幻西游手游私服防封,梦幻西游手游私服交易,梦幻西游手游私服帮派,梦幻西游手游私服武神坛,梦幻西游手游私服抓鬼,梦幻西游手游私服副本,梦幻西游手游私服召唤灵,梦幻西游手游私服门派,梦幻西游手游私服装备,梦幻西游手游私服宠物,梦幻西游手游私服2026最新,梦幻西游手游私服推荐,梦幻西游手游私服哪个好,梦幻西游手游私服排行,梦幻西游手游私服社区">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color: transparent;}
 body{font-family:"Noto Serif SC";background:#08111f;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:#fff}
 header{position:fixed;top:0;width:100%;height:70px;background:rgba(0,0,0,.45);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);z-index:999}
@@ -36,8 +36,15 @@ header{position:fixed;top:0;width:100%;height:70px;background:rgba(0,0,0,.45);ba
     flex-direction:column;
     gap:16px;
     text-align:center;
+    z-index:998;
+    pointer-events:auto !important;
 }
-.mobile-menu a{font-size:18px;padding:8px 0;}
+.mobile-menu a{
+    font-size:18px;
+    padding:8px 0;
+    cursor:pointer;
+    touch-action: manipulation;
+}
 
 .banner{height:100vh;min-height:550px;position:relative;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)),url("https://my.res.netease.com/pc/zt/20151217203610/img/name_a/power_pc1/9_045a902.jpg") center/cover no-repeat;display:flex;justify-content:center;align-items:center;text-align:center}
 .banner:after{content:"";position:absolute;left:0;right:0;bottom:0;height:250px;background:linear-gradient(transparent,#08111f)}
@@ -64,6 +71,55 @@ header{position:fixed;top:0;width:100%;height:70px;background:rgba(0,0,0,.45);ba
 footer{padding:40px 20px;text-align:center;background:#050a12;color:#888;font-size:15px}
 .star{position:fixed;width:2px;height:2px;background:#fff;animation:move 20s linear infinite}
 @keyframes move{0%{transform:translateY(-100vh)}100%{transform:translateY(100vh)}}
+
+.popup-mask{
+    position:fixed;
+    left:0;top:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.75);
+    z-index:9999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+.popup-box{
+    background:rgba(8,17,31,0.9);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,213,106,0.4);
+    border-radius:16px;
+    padding:40px 30px;
+    text-align:center;
+    width:100%;
+    max-width:420px;
+}
+.popup-box h3{
+    font-size:24px;
+    color:#ffd56a;
+    margin-bottom:20px;
+    font-weight:700;
+}
+.popup-box .wx-text{
+    font-size:20px;
+    margin-bottom:30px;
+    font-weight:500;
+}
+.popup-close{
+    padding:12px 40px;
+    background:rgba(212,166,79,0.35);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(255,213,106,0.4);
+    border-radius:50px;
+    display:inline-block;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:500;
+}
+.popup-close:hover{
+    background:rgba(245,208,107,0.45);
+}
 
 /* 移动端断点 */
 @media(max-width:1024px){
@@ -173,6 +229,12 @@ const mobileMenu = document.getElementById('mobileMenu');
 hamburger.onclick = ()=>{
     mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
 }
+//点击导航链接自动关闭移动端菜单
+document.querySelectorAll('.mobile-menu a').forEach(link=>{
+    link.addEventListener('click',()=>{
+        mobileMenu.style.display = 'none';
+    })
+})
 
 //客服弹窗逻辑
 const mask = document.getElementById('serviceMask');
