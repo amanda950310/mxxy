@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amanda950310.github.io/mxxy/sitemap.xml
